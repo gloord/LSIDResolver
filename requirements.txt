@@ -1,0 +1,2 @@
+lxml==4.3.0
+dnspython==1.15.0
