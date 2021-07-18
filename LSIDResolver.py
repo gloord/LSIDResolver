@@ -106,7 +106,7 @@ class Cache(metaclass=Singleton):
         # check if cache is expired
         cache_valid = datetime.datetime.utcnow() - datetime.timedelta(seconds=self.CACHE_TIME)
 
-        if cache_valid <= datetime.datetime.utcfromtimestamp(file_date):
+        if cache_valid <= datetime.datetime.fromtimestamp(file_date):
             return True
         else:
             return False

@@ -39,7 +39,7 @@ class TestCache(unittest.TestCase):
     def test_cache_valid_file_expiration_function(self):
         cache = LSIDResolver.Cache()
         # cached file is valid
-        self.assertTrue(cache.get_cache_expiration(datetime.datetime.now().timestamp()))
+        self.assertTrue(cache.get_cache_expiration(datetime.datetime.utcnow().timestamp()))
 
     def test_cache_invalid_file_expiration_function(self):
         cache = LSIDResolver.Cache()
